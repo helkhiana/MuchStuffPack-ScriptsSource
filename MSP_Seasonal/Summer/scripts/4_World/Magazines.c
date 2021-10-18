@@ -1,0 +1,1 @@
+class Msp_Water_Gun_Mag: MagazineStorage {};

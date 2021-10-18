@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D47C3ACFBE5C25B4}MuchStuffPack/Extras/modlogo.edds"
+ Author "desktop-c8ct5up"
+ ChangeDate 135047829
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "modlogo.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}
