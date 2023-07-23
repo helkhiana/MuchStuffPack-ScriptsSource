@@ -1,4 +1,4 @@
-class Msp_Slouchie_ColorBase extends Clothing
+class Msp_Slouchie_ColorBase extends HeadGear_Base
 {
 	override void SetActions()
 	{

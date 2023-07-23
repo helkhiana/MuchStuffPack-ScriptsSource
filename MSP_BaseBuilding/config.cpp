@@ -7,7 +7,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"MSP_Scripts"
+			"MSP_Scripts",
+            "MSP_Buildings_Data"
 		};
 	};
 };
@@ -56,10 +57,28 @@ class CfgMods
 class CfgVehicles
 {
 	class HouseNoDestruct;
-	
-	class Msp_GazeboNew : HouseNoDestruct
+	class Msp_BuildingWithFireplace;
+    class Msp_Kit;
+
+	class Msp_HND_Gazebo : HouseNoDestruct
 	{
 		scope=1;
-		model = "\MuchStuffPack\MSP_BaseBuilding\gazebo\gazebo3.p3d";
+		model = "\MuchStuffPack\MSP_BaseBuilding\gazebo\gazebo_new.p3d";
+	};
+
+    class Msp_Gazebo_Kit: Msp_Kit
+	{	
+		scope=2;	
+		displayName="Gazebo Kit";
+	};
+	class Msp_Gazebo: Msp_BuildingWithFireplace
+	{
+		scope=2;
+		displayName="Gazebo";
+		model="\MuchStuffPack\MSP_BaseBuilding\gazebo\gazebo_new.p3d";        
+		alignHologramToTerain=0;
+		hiddenSelections[]=
+		{
+		};		
 	};
 };

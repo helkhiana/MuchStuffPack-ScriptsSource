@@ -1,1 +1,1 @@
-class Msp_WaistPack_Base : Clothing {};
+class Msp_WaistPack_Base : Belt_Base {};

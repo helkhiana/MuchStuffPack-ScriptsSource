@@ -13,7 +13,7 @@ class Msp_Greenhouse_Base : GardenBase
 		RegisterNetSyncVariableBool("m_IsOpened");
 	}
 
-    string Get_KitName()
+    override string Get_KitName()
 	{
 		return "Msp_Greenhouse_Kit";
 	}
@@ -43,7 +43,7 @@ class Msp_Greenhouse_Base : GardenBase
 		GetInventory().LockInventory(HIDE_INV_FROM_SCRIPT);
 	}
 
-	bool IsOpen()
+	override bool IsOpen()
 	{
 		return m_IsOpened;
 	}
@@ -183,7 +183,7 @@ class Msp_Greenhouse_Base : GardenBase
 	override void SetActions()
 	{
 		super.SetActions();
-        AddAction(ActionCustomCloseOpen);
+        AddAction(ActionOpenCloseGreenhouse);
 		#ifdef CodeLock
         AddAction(ActionInteractLockOnMSP);
         AddAction(ActionManageLockOnMSP);

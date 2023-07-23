@@ -82,12 +82,12 @@ class ActionInteractLockOnMSP : ActionInteractBase
                 {
                     if (!codelock.IsOwner(identity.GetId()) && !codelock.IsGuest(identity.GetId()))
                     {
-                        GetCLUIManager().ShowMenu(CLMENU.GUEST_CODE_MENU, targetObject);
+                        GetCLUIManager().ShowMenu(CLMENU.GUEST_CODE_MENU, itemBase);
                     }
                 }
                 else
                 {
-                    GetCLUIManager().ShowMenu(CLMENU.SET_CODE_MENU, targetObject);
+                    GetCLUIManager().ShowMenu(CLMENU.SET_CODE_MENU, itemBase);
                 }
             }
         }

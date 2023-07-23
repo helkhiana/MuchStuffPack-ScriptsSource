@@ -70,7 +70,7 @@ class CfgVehicles
 	class Inventory_Base;
 	class Flashlight: Inventory_Base
 	{
-		inventorySlot[] = {"Flashlight","Flashlight1","Flashlight2","Flashlight3"};
+		inventorySlot[] += {"Flashlight","Flashlight1","Flashlight2","Flashlight3"};
 	};
 
  	class Clothing;
@@ -1811,129 +1811,7 @@ class CfgVehicles
 		{
 			"\MuchStuffPack\MSP_Clothing_Data\backpacks\MountaineeringBag\MountaineeringBag_co.paa"
 		};
-	};
-
-	
-	class Msp_Shirt_ColorBase: Clothing
-	{
-		displayName="$STR_CfgVehicles_TShirt_ColorBase0";
-		descriptionShort="$STR_CfgVehicles_TShirt_ColorBase1";
-		model="\MuchStuffPack\MSP_Clothing_Data\tops\rolledupshirt\rolledupshirt_f.p3d";
-		inventorySlot[]=
-		{
-			"Body"
-		};
-		itemInfo[]=
-		{
-			"Clothing",
-			"Body"
-		};
-		weight=310;
-		itemSize[]={3,2};
-		itemsCargoSize[]={4,3};
-		varWetMax=1;
-		heatIsolation=0.1;
-		ragQuantity=2;
-		visibilityModifier=0.94999999;
-		repairableWithKits[]={5,2};
-		repairCosts[]={30,25};
-		soundAttType="TShirt";
-		hiddenSelections[]=
-		{
-			"shirt",
-			"undershirt",
-			"personality"
-		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=50;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"DZ\characters\tops\Data\tshirt.rvmat",
-								"DZ\characters\tops\Data\tshirt_ground.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"DZ\characters\tops\Data\tshirt.rvmat",
-								"DZ\characters\tops\Data\tshirt_ground.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"DZ\characters\tops\Data\tshirt_damage.rvmat",
-								"DZ\characters\tops\Data\tshirt_ground_damage.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"DZ\characters\tops\Data\tshirt_damage.rvmat",
-								"DZ\characters\tops\Data\tshirt_ground_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"DZ\characters\tops\Data\tshirt_destruct.rvmat",
-								"DZ\characters\tops\Data\tshirt_ground_destruct.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
-		class ClothingTypes
-		{
-			male="\MuchStuffPack\MSP_Clothing_Data\tops\rolledupshirt\rolledupshirt_f.p3d";
-			female="\MuchStuffPack\MSP_Clothing_Data\tops\rolledupshirt\rolledupshirt_f.p3d";
-		};
-		class AnimEvents
-		{
-			class SoundWeapon
-			{
-				class pickUpItem
-				{
-					soundSet="Shirt_pickup_SoundSet";
-					id=797;
-				};
-				class drop
-				{
-					soundset="Shirt_drop_SoundSet";
-					id=898;
-				};
-			};
-		};
-	};
-	class Msp_Shirt_FloralBlue: Msp_Shirt_ColorBase
-	{
-		scope=2;
-		visibilityModifier=0.94999999;
-		hiddenSelectionsTextures[]=
-		{
-			"\MuchStuffPack\MSP_Clothing_Data\tops\rolledupshirt\rolledupshirt_floralblue_co.paa",
-			"\MuchStuffPack\MSP_Clothing_Data\tops\rolledupshirt\undershirt_co.paa"
-		};
-	};
+	};	
 };
 
 class CfgAmmo

@@ -3,7 +3,7 @@ class Msp_AppleCrate : Msp_Storage_Base {};
 
 class Msp_MilitaryCrate_Base : Msp_Openable_Placeable_Base 
 {    
-	void UpdateVisualState()
+	override void UpdateVisualState()
     {
         if ( IsOpen() )
         {
@@ -15,3 +15,5 @@ class Msp_MilitaryCrate_Base : Msp_Openable_Placeable_Base
         }
     }
 };
+
+class Msp_AmmoCrate : Msp_AmmoStorage_Base {};

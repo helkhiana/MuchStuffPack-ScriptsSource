@@ -104,6 +104,7 @@ class CfgVehicles
 		itemsCargoSize[]={10,10};
 		itemSize[]={6,3};
 		itemBehaviour=2;
+		hasCargoRestrictions=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_crates\ammocrate\ammocrate_co.paa"

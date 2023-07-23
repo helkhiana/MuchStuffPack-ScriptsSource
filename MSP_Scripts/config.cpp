@@ -80,7 +80,11 @@ class CfgVehicles
 		hiddenSelections[]=
 		{
 			"all"
-		};	
+		};			
+		simpleHiddenSelections[]=
+		{
+			"proxy_weapons", "proxy_clothes", "proxy_other"
+		};
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -209,7 +213,11 @@ class CfgVehicles
 		hiddenSelections[]=
 		{
 			"all"
-		};		
+		};			
+		simpleHiddenSelections[]=
+		{
+			"proxy_weapons", "proxy_clothes", "proxy_other"
+		};	
 		class DamageSystem
 		{
 			class GlobalHealth
@@ -255,6 +263,54 @@ class CfgVehicles
 		};
 	};
 	
+	class Msp_InventoryStorage_Base : Container_Base 
+	{
+		scope=0;      
+		itemSize[]={10,15};
+		overrideDrawArea="8.0";
+		physLayer="item_small";
+		weight=1000;
+		itemBehaviour=1;
+		itemsCargoSize[]={0,0};
+		allowOwnedCargoManipulation=1;
+		repairableWithKits[]={2};
+		repairCosts[]={25};
+		hiddenSelections[]=
+		{
+			"all"
+		};			
+		simpleHiddenSelections[]=
+		{
+			"proxy_weapons", "proxy_clothes", "proxy_other"
+		};		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=80;
+				};
+			};
+		};
+		soundImpactType="textile";
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class pickUpItem_Light
+				{
+					soundSet="pickUpCourierBag_Light_SoundSet";
+					id=796;
+				};
+				class pickUpItem
+				{
+					soundSet="pickUpCourierBag_SoundSet";
+					id=797;
+				};
+			};
+		};
+	};
 	class Msp_AmmoStorage_Base : Msp_Storage_Base {};
 	
 	class Msp_Openable_Base: Msp_Item 

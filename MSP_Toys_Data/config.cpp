@@ -72,6 +72,21 @@ class CfgVehicles
 			"MuchStuffPack\MSP_Toys_Data\bunny\Bunny_co.paa"
 		};
 	};
+	class Msp_PolarBear: Bear_ColorBase
+	{
+		scope=2;	
+		displayName="Polar Bear Toy";
+		descriptionShort="A cute polar bear toy to remind you of the adventures on Namalsk.";
+		model="\MuchStuffPack\MSP_Toys_Data\polarbear\polarbear.p3d";
+		hiddenSelections[]=
+		{
+			"all"
+		};   
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Toys_Data\polarbear\polarbear_toy_co.paa"
+		};
+	};
 	class Msp_Rabbit : Msp_Storage_Base
 	{
 		scope=2;

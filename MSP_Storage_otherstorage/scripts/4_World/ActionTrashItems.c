@@ -35,7 +35,7 @@ class ActionTrashItems: ActionContinuousBase
 	{	
 		Object targetObject = target.GetObject();
         Msp_TrashCan myItem = Msp_TrashCan.Cast( targetObject );
-        if (myItem && !myItem.IsInvEmpty())
+        if (myItem && !myItem.IsMspInvEmpty())
             return true; 
 		return false;
 	}
@@ -44,22 +44,18 @@ class ActionTrashItems: ActionContinuousBase
 	{
 		Msp_TrashCan myItem = Msp_TrashCan.Cast( action_data.m_Target.GetObject() );
 		if (myItem)
-		{			
-			if ( myItem.GetInventory().GetCargo() != NULL )
+		{		
+			array<EntityAI> children = new array<EntityAI>;
+			myItem.GetInventory().EnumerateInventory(InventoryTraversalType.LEVELORDER, children);
+			int count = children.Count();
+			for (int i = 0; i < count; ++i)
 			{
-				int item_count = myItem.GetInventory().GetCargo().GetItemCount();	
-				while(item_count > 0)
+				EntityAI child = children.Get(i);
+				if ( child )
 				{
-					CargoBase cargo = myItem.GetInventory().GetCargo();
-					ItemBase item = ItemBase.Cast(cargo.GetItem(0));	
-					if(item){
-						InventoryLocation myInvLoc = new InventoryLocation;
-						if (item.GetInventory().GetCurrentInventoryLocation(myInvLoc))
-						{
-							GetGame().ObjectDelete(myInvLoc.GetItem());
-						}
-					}
-					item_count = myItem.GetInventory().GetCargo().GetItemCount();
+					//If you copy this code again, youre a pos and karma will catch up
+					myItem.GetInventory().DropEntity(InventoryMode.SERVER, myItem, child);
+					GetGame().ObjectDelete(child);
 				}
 			}
 		}	

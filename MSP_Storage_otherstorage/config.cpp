@@ -58,6 +58,7 @@ class CfgVehicles
 	class Msp_Item;
 	class Msp_Openable_Base;
 	class Msp_Openable_Placeable_Base;
+	class Msp_InventoryStorage_Base;
 	
     class Msp_Safe : Msp_Openable_Placeable_Base
 	{
@@ -87,7 +88,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -104,6 +105,7 @@ class CfgVehicles
 		displayName="Tools Bench Blue";
 		descriptionShort="A bench to store your tools. Attachments: Axe, Pickaxe, Shovel, 3x Hammers, 5x Hatchets, 3x Saws, 2x Screwdrivers, 1x Pliers, 3x Metal Wire";
 		model="\MuchStuffPack\MSP_Storage_otherstorage\toolsbench\toolsbench.p3d";
+		hasProxiesToHide=1;
 		hiddenSelections[]=
 		{
 			"metalparts",
@@ -163,7 +165,7 @@ class CfgVehicles
 					"Hammer2",
 					"Hammer3"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class Side
 			{
@@ -175,7 +177,7 @@ class CfgVehicles
 					"Pickaxe1",
 					"Axe1"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};			
 			class SmallTools
 			{
@@ -187,7 +189,7 @@ class CfgVehicles
 					"Screwdriver1",
 					"Screwdriver2"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};			
 			class Wires
 			{
@@ -199,12 +201,12 @@ class CfgVehicles
 					"Wire2",
 					"Wire3"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 		};
 	};
 	
-	class Msp_ToolsBench_Grey_Kit: Msp_Kit
+	class Msp_ToolsBench_Grey_Kit: Msp_ToolsBench_Blue_Kit
 	{	
 		scope=2;	
 		displayName="Tools Bench Grey Kit";
@@ -220,7 +222,7 @@ class CfgVehicles
 		};
 	};
 	
-	class Msp_ToolsBench_Red_Kit: Msp_Kit
+	class Msp_ToolsBench_Red_Kit: Msp_ToolsBench_Blue_Kit
 	{		
 		scope=2;
 		displayName="Tools Bench Red Kit";
@@ -247,6 +249,7 @@ class CfgVehicles
 		displayName="Bookcase";
 		descriptionShort="Bookcase to store 50 books. Can be dismantled by screwdriver, hammer or pliers.";
 		model="\MuchStuffPack\MSP_Storage_otherstorage\bookcase\bookcase.p3d";
+		hasProxiesToHide=1;
 		hiddenSelections[]=
 		{
 			"body",
@@ -281,7 +284,7 @@ class CfgVehicles
 					"Book1","Book2","Book3","Book4","Book5",
 					"Book6","Book7","Book8","Book9","Book10"
 				};
-				icon="book";
+				icon="set:dayz_inventory image:book";
 			};			
 			class Shelf2
 			{
@@ -292,7 +295,7 @@ class CfgVehicles
 					"Book11","Book12","Book13","Book14","Book15",
 					"Book16","Book17","Book18","Book19","Book20"
 				};
-				icon="book";
+				icon="set:dayz_inventory image:book";
 			};		
 			class Shelf3
 			{
@@ -303,7 +306,7 @@ class CfgVehicles
 					"Book21","Book22","Book23","Book24","Book25",
 					"Book26","Book27","Book28","Book29","Book30"
 				};
-				icon="book";
+				icon="set:dayz_inventory image:book";
 			};		
 			class Shelf4
 			{
@@ -314,7 +317,7 @@ class CfgVehicles
 					"Book31","Book32","Book33","Book34","Book35",
 					"Book36","Book37","Book38","Book39","Book40"
 				};
-				icon="book";
+				icon="set:dayz_inventory image:book";
 			};		
 			class Shelf5
 			{
@@ -325,7 +328,7 @@ class CfgVehicles
 					"Book41","Book42","Book43","Book44","Book45",
 					"Book46","Book47","Book48","Book49","Book50"
 				};
-				icon="book";
+				icon="set:dayz_inventory image:book";
 			};
 		};
 	};
@@ -461,6 +464,112 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_otherstorage\wardrobe\wardrobe_white_co.paa"
+		};
+	};
+
+	class Msp_ParamedicBag_ColorBase : Msp_InventoryStorage_Base
+	{
+		scope=0;
+		displayName="Paramedic Bag";
+		descriptionShort="A medium sized paramedic bag for nuclear, biological, chemical and medical emergencies. It can store a full NBC suit and spare medical suplies.";	
+		model="\MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag.p3d";
+		itemsCargoSize[]={8,4};
+		itemSize[]={5,3};	
+		attachments[] = {"Headgear", "Mask", "Gloves", "Body", "Legs", "Feet", "GasMaskFilter"};
+		itemBehaviour=1;
+		hasCargoRestrictions=1;
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_red_co.paa"
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=150;
+					healthLevels[]=
+					{
+						
+						{
+							1.0,
+							
+							{
+								"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.0,
+							
+							{
+								"DZ\gear\containers\data\FirsAidKit_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+	};	
+	class Msp_ParamedicBag_Red : Msp_ParamedicBag_ColorBase
+	{
+		scope=2;
+		displayName="Paramedic Bag - Red";
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_red_co.paa"
+		};
+	};
+	class Msp_ParamedicBag_Green : Msp_ParamedicBag_ColorBase
+	{
+		scope=2;
+		displayName="Paramedic Bag - Green";
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_green_co.paa"
+		};
+	};
+	class Msp_ParamedicBag_Blue : Msp_ParamedicBag_ColorBase
+	{
+		scope=2;
+		displayName="Paramedic Bag - Blue";
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_blue_co.paa"
+		};
+	};
+	class Msp_ParamedicBag_NBC : Msp_ParamedicBag_ColorBase
+	{
+		scope=2;
+		displayName="Paramedic Bag - NBC";
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Storage_otherstorage\paramedicbag\paramedicbag_nbc_co.paa"
 		};
 	};
 };

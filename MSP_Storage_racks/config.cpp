@@ -70,6 +70,7 @@ class CfgVehicles
 		displayName="Gun Cabinet";
 		descriptionShort="Gun Cabinet that can store 8 rifles";
 		model="\MuchStuffPack\MSP_Storage_racks\guncabinet\GunCabinet.p3d";
+		hasProxiesToHide=1;
 		hiddenSelections[]=
 		{
 			"body",
@@ -115,7 +116,7 @@ class CfgVehicles
 					"Shoulder4",
 					"Shoulder7"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 			class CodeLock
 			{
@@ -125,7 +126,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -142,6 +143,7 @@ class CfgVehicles
 		displayName="Gun Rack";
 		descriptionShort="Gun Rack that can store 10 rifles";
 		model="\MuchStuffPack\MSP_Storage_racks\gunrack\gunrack.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"muchstuffpack\msp_storage_racks\gunrack\gunrack_co.paa"
@@ -184,7 +186,7 @@ class CfgVehicles
 					"Shoulder9",
 					"Shoulder10"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 		};
 	};
@@ -200,6 +202,7 @@ class CfgVehicles
 		displayName="Double Gun Rack";
 		descriptionShort="Double Gun Rack that can store 20 rifles";
 		model="\MuchStuffPack\MSP_Storage_racks\gunrack\doublegunrack.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"muchstuffpack\msp_storage_racks\gunrack\gunrack_co.paa"
@@ -252,7 +255,7 @@ class CfgVehicles
 					"Shoulder9",
 					"Shoulder10"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 			class Right
 			{
@@ -271,7 +274,7 @@ class CfgVehicles
 					"Shoulder12",
 					"Shoulder11"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 		};
 	};
@@ -287,6 +290,7 @@ class CfgVehicles
 		displayName="Fishing Rods Rack";
 		descriptionShort="Fishing Rods Rack that can store 5 rods";
 		model="\MuchStuffPack\MSP_Storage_racks\fishingrodsrack\fishingrodsrack.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"muchstuffpack\msp_storage_racks\swordstand\swordstand_co.paa"
@@ -323,7 +327,7 @@ class CfgVehicles
 					"fishingrod9",
 					"fishingrod10"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 		};
 	};
@@ -339,6 +343,7 @@ class CfgVehicles
 		displayName="Wooden Gun Rack";
 		descriptionShort="Gun Rack that can store 8 rifles";
 		model="\MuchStuffPack\MSP_Storage_racks\weaponrack\weaponrack.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_racks\weaponrack\weaponrack_co.paa"
@@ -377,7 +382,7 @@ class CfgVehicles
 					"Shoulder7",
 					"Shoulder8"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 		};
 	};
@@ -393,6 +398,7 @@ class CfgVehicles
 		displayName="Gun Wall";
 		descriptionShort="Gun Wall that can store 8 rifles";
 		model="\MuchStuffPack\MSP_Storage_racks\gunwall\gunwall.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"muchstuffpack\msp_storage_racks\gunwall\data\gunwall_co.paa"
@@ -431,7 +437,7 @@ class CfgVehicles
 					"Shoulder7",
 					"Shoulder8"
 				};
-				icon="shoulderleft";
+				icon="set:dayz_inventory image:shoulderleft";
 			};
 		};
 	};

@@ -59,24 +59,11 @@ class CfgVehicles
 	class Msp_Kit;
 	class Msp_Item;
 	class HouseNoDestruct;
+	class Msp_Openable_Base;
 
 	class Msp_BuildingWithFireplace : Msp_Item {};
-	class Msp_Gazebo_Kit: Msp_Kit
-	{	
-		scope=2;	
-		displayName="Gazebo Kit";
-	};
-	class Msp_Gazebo: Msp_BuildingWithFireplace
-	{
-		scope=2;
-		displayName="Gazebo";
-		model="\MuchStuffPack\MSP_Buildings_Data\gazebo\gazebo.p3d";
-		itemPlacingPos="0 2.3 0";
-		hiddenSelectionsTextures[]=
-		{
-			"MuchStuffPack\MSP_Buildings_Data\gazebo\gazebo_co.paa"
-		};
-	};
+	class Msp_Fireplace_Openable : Msp_Openable_Base {};
+	
 	
 	class Msp_StoneFireplace_Kit: Msp_Kit
 	{		
@@ -148,6 +135,85 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Buildings_Data\boxinggym\boxingring_floor_co.paa"
+		};
+	};
+
+	
+	class Msp_Stove_Kit: Msp_Kit
+	{		
+		scope=2;
+		displayName="Stove Kit";
+	};
+	class Msp_Stove: Msp_Fireplace_Openable
+	{
+		scope=2;
+		displayName="Stove";
+		model="\MuchStuffPack\MSP_Buildings_Data\furnace\furnace.p3d";
+		hiddenSelections[]=
+		{
+			"all"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"muchstuffpack\msp_buildings_data\furnace\furnace_co.paa"
+		};
+	};
+
+	class Msp_HND_StoneFireplace : HouseNoDestruct
+	{		
+		scope=1;
+		displayName="Stone Fireplace";
+		model="\MuchStuffPack\MSP_Buildings_Data\fireplace\stonefireplace.p3d";
+		hiddenSelections[]=
+		{
+			"arches",
+			"ashes",
+			"bottomsection",
+			"fireracksection",
+			"lowersection",
+			"middlesection",
+			"topsection"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"muchstuffpack\msp_buildings_data\fireplace\arches_co.paa",
+			"muchstuffpack\msp_buildings_data\fireplace\ashes_co.paa",
+			"muchstuffpack\msp_buildings_data\fireplace\bottomsection_co.paa",
+			"muchstuffpack\msp_buildings_data\fireplace\firerack_co.paa",
+			"muchstuffpack\msp_buildings_data\fireplace\lowersection_co.paa",
+			"muchstuffpack\msp_buildings_data\fireplace\middlesection_co.paa",
+			"muchstuffpack\msp_buildings_data\fireplace\topsection_co.paa"
+		};
+	};
+	class Msp_HND_Stove : HouseNoDestruct
+	{		
+		scope=1;
+		displayName="Stove";
+		model="\MuchStuffPack\MSP_Buildings_Data\furnace\furnace.p3d";
+		hiddenSelections[]=
+		{
+			"all"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"muchstuffpack\msp_buildings_data\furnace\furnace_co.paa"
+		};
+		
+		class Doors
+		{
+			class Doors1
+			{
+				displayName="door 1";
+				component="Doors1";
+				soundPos="doors1_action";
+				animPeriod=1;
+				initPhase=0;
+				initOpened=0.30000001;
+				soundOpen="doorMetalSmallOpen";
+				soundClose="doorMetalSmallClose";
+				soundLocked="doorMetalSmallRattle";
+				soundOpenABit="doorMetalSmallOpenABit";
+			};
 		};
 	};
 };

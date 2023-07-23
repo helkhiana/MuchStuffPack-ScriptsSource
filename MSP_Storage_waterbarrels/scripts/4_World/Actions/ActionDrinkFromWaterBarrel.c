@@ -45,9 +45,8 @@ class ActionDrinkFromWaterBarrel: ActionContinuousBase
 			string selection = targetObject.GetActionComponentName(target.GetComponentIndex());
 			if (selection && selection == "valve")
 			{				
-				ItemBase barrel = ItemBase.Cast(targetObject.FindAttachmentBySlotName("WaterBarrel1"));				
-				ItemBase valve = ItemBase.Cast(targetObject.FindAttachmentBySlotName("Valve"));
-				if(valve && barrel && barrel.GetQuantity() > 0)
+				ItemBase barrel = ItemBase.Cast(targetObject.FindAttachmentBySlotName("WaterBarrel1"));		
+				if(barrel && barrel.GetQuantity() > 0)
 					return true;
 			}
 		}

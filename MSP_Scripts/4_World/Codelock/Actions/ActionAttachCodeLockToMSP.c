@@ -20,6 +20,10 @@ class ActionAttachCodeLockToMSP : ActionSingleUseBase
             int slot = InventorySlots.GetSlotIdFromString(CLConst.clAttachment);
             if (slot == InventorySlots.INVALID)
                 return false;
+            // if(!itemBase.GetInventory().CanAddAttachment(item))
+            // {
+            //     return false;
+            // }
             if (!itemBase.IsCodeLocked() && itemBase.IsOpen() && GetDayZGame().Get_MSP_Codelock_Config().CanAttach())
                 return true;
         }

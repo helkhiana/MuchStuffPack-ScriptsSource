@@ -1,20 +1,15 @@
 class Msp_BoxingHelmet_ColorBase extends HelmetBase
 {
-	override bool CanPutAsAttachment( EntityAI parent )
+	override protected void InitGlobalExclusionValues()
 	{
-		if(!super.CanPutAsAttachment(parent)) {return false;}
-		bool is_mask_only = false;
+		super.InitGlobalExclusionValues();
 		
-		if ( parent.FindAttachmentBySlotName( "Mask" ) )
-		{
-			is_mask_only = parent.FindAttachmentBySlotName( "Mask" ).ConfigGetBool( "noHelmet" );
-		}
+		AddSingleExclusionValueGlobal(EAttExclusions.EXCLUSION_HEADGEAR_HELMET_0);
 		
-		if ( ( GetNumberOfItems() == 0 || !parent || parent.IsMan() ) && !is_mask_only )
-		{
-			return true;
-		}
-		return false;
+		AddSingleExclusionValueGlobal(EAttExclusions.EXCLUSION_MASK_0);
+		AddSingleExclusionValueGlobal(EAttExclusions.EXCLUSION_MASK_1);
+		AddSingleExclusionValueGlobal(EAttExclusions.EXCLUSION_MASK_2);
+		AddSingleExclusionValueGlobal(EAttExclusions.EXCLUSION_HEADSTRAP_0);
 	}
 };
 

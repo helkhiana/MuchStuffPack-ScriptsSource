@@ -54,6 +54,7 @@ class CfgVehicles
 	class GardenPlotPolytunnel;
 	class Msp_Storage_Base;
 	class Msp_Kit;
+
 	class Msp_Planter_Base : GardenPlotPolytunnel
 	{
 		scope = 0;
@@ -63,6 +64,21 @@ class CfgVehicles
 	class Msp_Greenhouse_Base : GardenPlotPolytunnel
 	{
 		scope = 0;
+		storageCategory = 1;
+		useEntityHierarchy = "true";
+		physLayer = "item_large";
+		slopeTolerance = 0.3;
+		alignHologramToTerain = 1;
+		yawPitchRollLimit[] = {10,10,10};
+		class AnimationSources
+		{
+			class Doors1
+			{
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
+			};
+		};
 	};
 	class Msp_PlanterBox: Msp_Planter_Base
 	{
@@ -122,17 +138,17 @@ class CfgVehicles
 		hiddenSelections[] = {"all"};
 		hiddenSelectionsTextures[] = {"MuchStuffPack\MSP_Garden_Data\planter\planter_wood_co.paa"};
 	};
+	
+	class Msp_Greenhouse_Kit: Msp_Kit
+	{
+		scope = 2;
+		displayName = "Greenhouse Kit";
+	};
 	class Msp_Greenhouse: Msp_Greenhouse_Base
 	{
 		scope = 2;
 		displayName = "Greenhouse";
 		model = "\MuchStuffPack\MSP_Garden_Data\greenhouse\greenhouse.p3d";
-		storageCategory = 1;
-		useEntityHierarchy = "true";
-		physLayer = "item_large";
-		slopeTolerance = 0.3;
-		alignHologramToTerain = 1;
-		yawPitchRollLimit[] = {10,10,10};
 		attachments[] = { "Att_CombinationLock","SeedBase_1","SeedBase_2","SeedBase_3","SeedBase_4","SeedBase_5","SeedBase_6","SeedBase_7","SeedBase_8","SeedBase_9"};
 		class GUIInventoryAttachmentsProps
 		{
@@ -151,7 +167,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -165,20 +181,143 @@ class CfgVehicles
 			};
 		};
 	};
-	class Msp_Greenhouse_Kit: Msp_Kit
+		
+	class Msp_Greenhouse_White_Kit: Msp_Kit
 	{
 		scope = 2;
-		displayName = "Greenhouse Kit";
+		displayName = "White Wood Greenhouse Kit";
 	};
-	class Msp_GreenhouseWood_Kit: Msp_Kit
+	class Msp_Greenhouse_White: Msp_Greenhouse_Base
+	{
+		scope = 2;
+		displayName = "White Wood Greenhouse";
+		model = "\MuchStuffPack\MSP_Garden_Data\greenhouse_white\greenhouse_white.p3d";
+		attachments[]=
+		{
+			"Att_CombinationLock",
+			"SeedBase_1",
+			"SeedBase_2",
+			"SeedBase_3",
+			"SeedBase_4",
+			"SeedBase_5",
+			"SeedBase_6",
+			"SeedBase_7",
+			"SeedBase_8",
+			"SeedBase_9",
+			"SeedBase_10",
+			"SeedBase_11",
+			"SeedBase_12"
+		};
+		class GUIInventoryAttachmentsProps
+		{
+			class Filling
+			{
+				name="$STR_attachment_Filling0";
+				description="";
+				icon="set:dayz_inventory image:cat_gp_filling";
+				attachmentSlots[]=
+				{
+					"SeedBase_1",
+					"SeedBase_2",
+					"SeedBase_3",
+					"SeedBase_4",
+					"SeedBase_5",
+					"SeedBase_6",
+					"SeedBase_7",
+					"SeedBase_8",
+					"SeedBase_9",
+					"SeedBase_10",
+					"SeedBase_11",
+					"SeedBase_12"
+				};
+			};
+			class CodeLock
+			{
+				name="CodeLock";
+				description="";
+				attachmentSlots[]=
+				{
+					"Att_CombinationLock"
+				};
+				icon="set:dayz_inventory image:cat_bb_attachments";
+				view_index=3;
+			};
+		};
+	};
+	
+	class Msp_Greenhouse_Vanilla_Kit: Msp_Kit
 	{
 		scope = 2;
 		displayName = "Wood Greenhouse Kit";
 	};
+	class Msp_Greenhouse_Vanilla: Msp_Greenhouse_Base
+	{
+		scope = 2;
+		displayName = "Wood Greenhouse";
+		model = "\MuchStuffPack\MSP_Garden_Data\greenhouse_white\greenhouse_vanilla.p3d";
+		attachments[]=
+		{
+			"Att_CombinationLock",
+			"SeedBase_1",
+			"SeedBase_2",
+			"SeedBase_3",
+			"SeedBase_4",
+			"SeedBase_5",
+			"SeedBase_6",
+			"SeedBase_7",
+			"SeedBase_8",
+			"SeedBase_9",
+			"SeedBase_10",
+			"SeedBase_11",
+			"SeedBase_12"
+		};
+		class GUIInventoryAttachmentsProps
+		{
+			class Filling
+			{
+				name="$STR_attachment_Filling0";
+				description="";
+				icon="set:dayz_inventory image:cat_gp_filling";
+				attachmentSlots[]=
+				{
+					"SeedBase_1",
+					"SeedBase_2",
+					"SeedBase_3",
+					"SeedBase_4",
+					"SeedBase_5",
+					"SeedBase_6",
+					"SeedBase_7",
+					"SeedBase_8",
+					"SeedBase_9",
+					"SeedBase_10",
+					"SeedBase_11",
+					"SeedBase_12"
+				};
+			};
+			class CodeLock
+			{
+				name="CodeLock";
+				description="";
+				attachmentSlots[]=
+				{
+					"Att_CombinationLock"
+				};
+				icon="set:dayz_inventory image:cat_bb_attachments";
+				view_index=3;
+			};
+		};
+	};
+	class Msp_GreenhouseWood_Kit: Msp_Kit
+	{
+		scope = 2;
+		displayName = "Old Greenhouse Kit";
+		descriptionShort="This greenhouse will be decommisioned. Remove it from spawns. After placement dismantle it to get the new kit.";
+	};
 	class Msp_GreenhouseWood: Msp_Greenhouse_Base
 	{
 		scope = 2;
-		displayName = "Greenhouse Wood";
+		displayName = "Old Greenhouse";
+		descriptionShort="This greenhouse will be decommisioned. Dismantle it to get the new kit.";
 		model = "\MuchStuffPack\MSP_Garden_Data\greenhouse_wood\greenhousewood.p3d";
 		attachments[] = { "Att_CombinationLock","SeedBase_1","SeedBase_2","SeedBase_3","SeedBase_4","SeedBase_5","SeedBase_6","SeedBase_7","SeedBase_8"};
 		class GUIInventoryAttachmentsProps
@@ -198,17 +337,8 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
-			};
-		};
-		class AnimationSources
-		{
-			class Doors1
-			{
-				source = "user";
-				initPhase = 0;
-				animPeriod = 1;
 			};
 		};
 	};

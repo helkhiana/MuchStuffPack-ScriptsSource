@@ -26,13 +26,7 @@ class ActionDismantleItem: ActionContinuousBase
 
 	override string GetText()
 	{
-		PlayerBase player = PlayerBase.Cast( GetGame().GetPlayer() );
-		if ( player )
-		{
-			return "Dismantle";
-		}
-		
-		return "";
+		return "Dismantle";
 	}
 
 	override bool ActionCondition( PlayerBase player, ActionTarget target, ItemBase item )
@@ -43,8 +37,12 @@ class ActionDismantleItem: ActionContinuousBase
 			ItemBase myItem = ItemBase.Cast( targetObject );
 			if(myItem)
 			{
-				if(!myItem.IsInvEmpty()) return false;				
-				if (myItem.IsInherited(Msp_Item) || myItem.IsInherited(Msp_Openable_Base) || myItem.IsInherited(Msp_Greenhouse_Base) && !myItem.IsInherited(Msp_Openable_Placeable_Base))								
+				#ifdef CodeLock
+					if(myItem.IsCodeLocked())
+						return false;
+				#endif
+				if(!myItem.IsMspInvEmpty()) return false;				
+				if (myItem.IsAnyInherited({Msp_Item, Msp_Openable_Base, Msp_Greenhouse_Base}) && !myItem.IsInherited(Msp_Openable_Placeable_Base))								
 					return true;
 			}
 		}
@@ -60,14 +58,8 @@ class ActionDismantleItem: ActionContinuousBase
 		{
 			name = myItem.Get_KitName();
 			myItem.Delete();
+			action_data.m_MainItem.DecreaseHealth( 5, false );
+			ItemBase.Cast( GetGame().CreateObject(name, pos) );
 		}
-
-		//add damage to tool
-		action_data.m_MainItem.DecreaseHealth( 5, false );
-		
-		//return materials			
-		ItemBase.Cast( GetGame().CreateObject(name, pos) );
-		return;	
-	}
-	
+	}	
 }

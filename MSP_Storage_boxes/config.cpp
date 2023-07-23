@@ -60,6 +60,7 @@ class CfgVehicles
 	class Msp_Kit;
 	class Msp_Item;
     class Msp_AmmoStorage_Base;
+	class Msp_InventoryStorage_Base;
 	
 	class Msp_LargeAmmoBox: Msp_AmmoStorage_Base
 	{
@@ -69,7 +70,8 @@ class CfgVehicles
 		model="\dz\gear\containers\300RoundBox.p3d";
 		weight=2250;
 		itemSize[]={5,4};	
-		itemBehaviour=1;	
+		itemBehaviour=1;			
+		hasCargoRestrictions=1;
 		itemsCargoSize[]={10,4};
 		inventorySlot[]=
 		{
@@ -133,7 +135,7 @@ class CfgVehicles
 					"FGrenade3",
 					"FGrenade4"
 				};
-				icon="grenade";
+				icon="set:dayz_inventory image:grenade";
 			};
 			class GrenadesRow2
 			{
@@ -146,7 +148,7 @@ class CfgVehicles
 					"FGrenade7",
 					"FGrenade8"
 				};
-				icon="grenade";
+				icon="set:dayz_inventory image:grenade";
 			};
 			class GrenadesRow3
 			{
@@ -157,12 +159,12 @@ class CfgVehicles
 					"FGrenade9",
 					"FGrenade10"
 				};
-				icon="grenade";
+				icon="set:dayz_inventory image:grenade";
 			};
 		};
 	};
 
-    class Msp_TackleBox : Msp_Storage_Base
+    class Msp_TackleBox : Msp_InventoryStorage_Base
 	{
 		scope=2;
 		displayName="Tackle Box";
@@ -171,6 +173,7 @@ class CfgVehicles
 		itemsCargoSize[]={8,6};
 		itemSize[]={6,4};
 		itemBehaviour=2;
+		hasCargoRestrictions=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_boxes\tacklebox\tacklebox_co.paa"
@@ -186,7 +189,7 @@ class CfgVehicles
 		};
 	};
 	
-    class Msp_CoolerBox : Msp_Storage_Base
+    class Msp_CoolerBox : Msp_InventoryStorage_Base
 	{
 		scope=2;
 		displayName="Cooler Box";
@@ -195,6 +198,7 @@ class CfgVehicles
 		itemsCargoSize[]={8,8};
 		itemSize[]={5,6};
 		itemBehaviour=2;
+		hasCargoRestrictions=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_boxes\coolerbox\coolerbox_co.paa"
@@ -255,6 +259,34 @@ class CfgVehicles
 		};
 	};
 
+    class Msp_MedCase : Msp_Openable_Placeable_Base
+	{
+		scope=2;
+		displayName="Medical Case";
+		descriptionShort="A case to store medical items.";
+		model="\MuchStuffPack\MSP_Storage_boxes\medcase\medcase.p3d";
+		itemsCargoSize[]={10,6};
+		itemSize[]={5,4};
+		itemBehaviour=2;
+		hasCargoRestrictions=1;
+		hiddenSelections[]=
+		{
+			"medcase"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"MuchStuffPack\MSP_Storage_boxes\medcase\medcase_co.paa"
+		};
+		class AnimationSources
+		{
+			class Doors1
+			{
+				source="user";
+				initPhase=1;
+				animPeriod=1;
+			};
+		};
+	};
 	//Kits
 	class Msp_StorageBox_Kit: Msp_Kit
 	{

@@ -5,12 +5,12 @@ class Msp_FireplaceRailing : Msp_BuildingWithFireplace
     }
     override bool CanPutInCargo( EntityAI parent )
     {
-        return pickable && IsInvEmpty();
+        return pickable && IsMspInvEmpty();
     }
     
     override bool CanPutIntoHands(EntityAI parent)
 	{
-		return pickable && IsInvEmpty();		
+		return pickable && IsMspInvEmpty();		
     } 
 
     override bool IsDeployable() 

@@ -92,7 +92,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Donation Barrel";
-		descriptionShort="Barrel to donate your unwanted items. Take what you need, donate what you don't.";
+		descriptionShort="Barrel to donate your unwanted items. Take what you need, donate what you don't. If you see these barrels multiplying, remove them from whatever you use to spawn them.";
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Retextures_Data\retextures\barrel_blue_donation_co.paa"
