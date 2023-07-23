@@ -1,4 +1,4 @@
-class Msp_BaseballCap_Base : Clothing 
+class Msp_BaseballCap_Base : HeadGear_Base 
 {    
     private bool m_IsReversed = false;
 

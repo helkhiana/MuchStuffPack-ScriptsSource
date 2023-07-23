@@ -70,6 +70,7 @@ class CfgVehicles
 		displayName="Military Locker";
 		descriptionShort="Military Locker that can store various items. Attachments: 6x Rifles, 1x Pistol, 3x Ammo Boxes, 4x Grenades, a full loadout";
 		model="\MuchStuffPack\MSP_Storage_lockers\militarylocker\militarylocker.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_lockers\militarylocker\militarylocker_co.paa"
@@ -122,7 +123,7 @@ class CfgVehicles
 					"VestGrenadeC",
 					"VestGrenadeD"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class Rifle_Storage
 			{
@@ -137,7 +138,7 @@ class CfgVehicles
 					"Shoulder5",
 					"Shoulder6"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			
 			class Various
@@ -149,7 +150,7 @@ class CfgVehicles
 					"Pistol",
 					"Knife"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class AmmoBoxes
 			{
@@ -161,7 +162,7 @@ class CfgVehicles
 					"AmmoBox2",
 					"AmmoBox3"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class Loadout_Storage
 			{
@@ -181,7 +182,7 @@ class CfgVehicles
 					"Legs",
 					"Feet"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 		};
 	};
@@ -196,6 +197,7 @@ class CfgVehicles
 		displayName="Locker";
 		descriptionShort="Locker that can store various items. Attachments: 2x Rifles, a full loadout";
 		model="\MuchStuffPack\MSP_Storage_lockers\threelocker\locker.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_lockers\threelocker\locker_co.paa"
@@ -234,7 +236,7 @@ class CfgVehicles
 					"Shoulder1",
 					"Shoulder2"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class Loadout_Storage
 			{
@@ -254,7 +256,7 @@ class CfgVehicles
 					"Legs",
 					"Feet"
 				};
-				icon="cat_common_cargo";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class CodeLock
 			{
@@ -264,7 +266,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -281,6 +283,7 @@ class CfgVehicles
 		displayName="Solo Locker";
 		descriptionShort="Locker that can store various items. Attachments: 2x Rifles, a full loadout";
 		model="\MuchStuffPack\MSP_Storage_lockers\sololocker\sololocker.p3d";
+		hasProxiesToHide=1;
 		hiddenSelections[]=
 		{
 			"all"
@@ -358,7 +361,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -467,6 +470,7 @@ class CfgVehicles
 		displayName="Old Locker";
 		descriptionShort="Locker that can store various items, slight increase in storage. Attachments: 2x Rifles, 1x Pistol, a full loadout";
 		model="\MuchStuffPack\MSP_Storage_lockers\oldlocker\oldlocker.p3d";
+		hasProxiesToHide=1;
 		hiddenSelections[]=
 		{
 			"all"
@@ -545,7 +549,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -575,6 +579,7 @@ class CfgVehicles
 		displayName="4 Door Military Locker";
 		descriptionShort="Locker that can store various items. Attachments: 7x Rifles, 4x Pistols, 1x First Aid Kit, 3x Ammo Boxes, 1x Protector Case, 1x Walkie Talkie, a full loadout";
 		model="\MuchStuffPack\MSP_Storage_lockers\tanmilitarylocker\tanmilitarylocker.p3d";
+		hasProxiesToHide=1;
 		hiddenSelections[]=
 		{
 			"all"
@@ -694,7 +699,7 @@ class CfgVehicles
 					"ProtectorCase",
 					"FirstAid"
 				};
-				icon = "";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 			class CodeLock
 			{
@@ -704,7 +709,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};
 		};
@@ -734,6 +739,7 @@ class CfgVehicles
 		displayName="Rifle Safe";
 		descriptionShort="Sturdy Rifle Safe that can store various items. Attachments: 6x Rifles, 3x Pistol";
 		model="\MuchStuffPack\MSP_Storage_lockers\riflesafe\riflesafe.p3d";
+		hasProxiesToHide=1;
 		hiddenSelectionsTextures[]=
 		{
 			"MuchStuffPack\MSP_Storage_lockers\riflesafe\data\riflesafe_co.paa"
@@ -794,7 +800,7 @@ class CfgVehicles
 				{
 					"Att_CombinationLock"
 				};
-				icon="cat_bb_attachments";
+				icon="set:dayz_inventory image:cat_bb_attachments";
 				view_index=3;
 			};		
 		};

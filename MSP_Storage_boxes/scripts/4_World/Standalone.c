@@ -18,7 +18,7 @@ class Msp_GrenadeBox : Msp_Openable_Placeable_Base
 		return "0 0.08 0";
 	}
 
-    override bool IsInvEmpty()
+    override bool IsMspInvEmpty()
 	{   
 		if (GetNumberOfItems() < 1)
 		{
@@ -28,57 +28,23 @@ class Msp_GrenadeBox : Msp_Openable_Placeable_Base
 	}
 };
 
-class Msp_TackleBox : Msp_Storage_Base {
-
-	ref array<string> m_AllowedCargo = {"Hook","BoneHook","Worm","Bait","BoneBait", "zeroy_lure_base"};
-
-	override bool CanReceiveItemIntoCargo (EntityAI item)
+class Msp_TackleBox : Msp_InventoryStorage_Base 
+{	
+	void Msp_TackleBox()
 	{
-		foreach( string allowedCargo : m_AllowedCargo )
-		{
-			if(item.IsKindOf(allowedCargo))
-				return true;
-		}
-		
-		return false;
-	}
-	
-	override bool CanSwapItemInCargo (EntityAI child_entity, EntityAI new_entity)
-	{
-		foreach( string allowedCargo : m_AllowedCargo )
-		{		
-			if(child_entity.IsKindOf(allowedCargo) && new_entity.IsKindOf(allowedCargo))
-				return true;
-		}		
-		return false;		
+		m_AllowedMSPCargo = {"Hook",  "BoneHook","Worm", "Bait", "BoneBait", "zeroy_lure_base"};;
+		m_MSPCargoTagName = "isTackleBoxCargo";
 	}
 };
 
 class Msp_TackleBox_Black : Msp_TackleBox {};
 
-class Msp_CoolerBox : Msp_Storage_Base {
-
-	ref array<string> m_AllowedCargo = {"Carp","Sardines","Mackerel","CarpFilletMeat","MackerelFilletMeat","zeroy_chub","zeroy_cod","zeroy_pike","zeroy_shell","CodFilletMeat","PikeFilletMeat"};
-
-	override bool CanReceiveItemIntoCargo (EntityAI item)
+class Msp_CoolerBox : Msp_InventoryStorage_Base 
+{
+	void Msp_CoolerBox()
 	{
-		foreach( string allowedCargo : m_AllowedCargo )
-		{
-			if(item.IsKindOf(allowedCargo))
-				return true;
-		}
-		
-		return false;
-	}
-	
-	override bool CanSwapItemInCargo (EntityAI child_entity, EntityAI new_entity)
-	{
-		foreach( string allowedCargo : m_AllowedCargo )
-		{		
-			if(child_entity.IsKindOf(allowedCargo) && new_entity.IsKindOf(allowedCargo))
-				return true;
-		}		
-		return false;		
+		m_AllowedMSPCargo = MSP_StorageRestrictions.FishCargoItems;
+		m_MSPCargoTagName = "isCoolerBoxCargo";
 	}
 };
 
@@ -113,6 +79,38 @@ class Msp_Basket_Wicker : Msp_Openable_Placeable_Base
         {
             SetAnimationPhase("Doors1",0);
             SetAnimationPhase("Doors2",0);
+        }
+    }
+};
+
+
+class Msp_MedCase : Msp_Openable_Placeable_Base 
+{
+	void Msp_MedCase()
+	{
+		m_AllowedMSPCargo = MSP_StorageRestrictions.MedicalCargoItems;
+		m_MSPCargoTagName = "isMedicalItem";
+	}
+
+	override vector Get_ItemPlacingPos()
+	{
+		return "0 0.2 0";
+	}
+
+	override vector Get_ItemPlacingOrientation()
+	{
+		return "-90 0 -90";
+	}
+	
+	override void UpdateVisualState()
+    {
+        if ( IsOpen() )
+        {
+            SetAnimationPhase("Doors1",0);
+        }
+        else
+        {
+            SetAnimationPhase("Doors1",1);
         }
     }
 };

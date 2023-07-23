@@ -1,4 +1,4 @@
-class Msp_Item : ItemBase
+class Msp_Item : Msp_ItemBase
 {	
 	override bool CanPutInCargo(EntityAI parent)
 	{
@@ -11,7 +11,7 @@ class Msp_Item : ItemBase
 	}
 };
 
-class Msp_Kit : ItemBase
+class Msp_Kit : Msp_ItemBase
 {
 	void Msp_Kit()
 	{

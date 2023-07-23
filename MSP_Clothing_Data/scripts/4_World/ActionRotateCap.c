@@ -38,7 +38,10 @@ class ActionRotateCap : ActionSingleUseBase
 			ClearInventoryReservationEx(action_data);
 
 		Msp_BaseballCap_Base cap = Msp_BaseballCap_Base.Cast(action_data.m_Player.GetItemInHands());
-		cap.RotateCap();
-		cap.SetCapSelection();
+		if(cap)
+		{
+			cap.RotateCap();
+			cap.SetCapSelection();
+		}	
 	}
 };

@@ -7,7 +7,7 @@ class Msp_Mailbox : Msp_Openable_Placeable_Base {
 		RegisterNetSyncVariableInt("m_LeverState", 0, 61);
     }
 
-	vector Get_ItemPlacingPos()
+	override vector Get_ItemPlacingPos()
 	{
 		return "0 0.5 0";
 	}

@@ -61,11 +61,14 @@ class CfgVehicles
 		displayName="Water Barrel Stand";
 		descriptionShort="Attach a water barrel and a valve/faucet to be able to drink, pour or drain water.";        
 		model="\MuchStuffPack\MSP_Storage_waterbarrels\waterbarrel\waterbarrel_stand.p3d";
-		itemSize[]={5,3};
+		itemSize[]={5,3};				
+		simpleHiddenSelections[]=
+		{
+			"valve"
+		};
 		attachments[]=
 		{
-			"WaterBarrel1",
-			"Valve"
+			"WaterBarrel1"
 		};
 		class GUIInventoryAttachmentsProps
 		{
@@ -77,17 +80,7 @@ class CfgVehicles
 				{
 					"WaterBarrel1"
 				};
-				icon="missing";
-			};
-			class Valve
-			{
-				name="Valve";
-				description="";
-				attachmentSlots[]=
-				{
-					"Valve"
-				};
-				icon="missing";
+				icon="set:dayz_inventory image:cat_common_cargo";
 			};
 		};
 		itemBehaviour=2;
@@ -114,7 +107,7 @@ class CfgVehicles
 		scope=2;
 		model="\MuchStuffPack\MSP_Storage_waterbarrels\waterbarrel\waterbarrel.p3d";
 		displayName="Water Barrel";
-		descriptionShort="Can store large amounts of water";		
+		descriptionShort="A large water barrel which can store up to 60L of water. You cannot drink directly from it. Place it in a waterbarrel stand to drink from it.";		
 		inventorySlot[]={"WaterBarrel1"};
 		itemSize[]={10,10};
 		itemBehaviour=2;
@@ -206,7 +199,7 @@ class CfgVehicles
 		scope=2;
 		model="\MuchStuffPack\MSP_Storage_waterbarrels\waterbarrel\waterbarrel_valve.p3d";
 		displayName="Water Barrel Valve";
-		descriptionShort="Attach the valve/faucet to the water barrel stand while it has a water barrel attached to be able to drink, pour or drain water.";        	
+		descriptionShort="To be removed. Don't spawn this anymore.";        	
 		inventorySlot[]={"Valve"};
 		itemSize[]={1,2};
 		itemBehaviour=1;

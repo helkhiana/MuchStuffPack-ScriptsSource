@@ -65,7 +65,7 @@ class CfgVehicles
 		displayName="Trophy";
 		model="\MuchStuffPack\MSP_Sports_Data\random\trophy\trophy.p3d";
 		itemSize[]={3,5};
-		itemBehaviour=1;		
+		itemBehaviour=1;	
 		hiddenSelections[]=
 		{
 			"plate",

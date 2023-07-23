@@ -27,6 +27,6 @@ class Msp_GreenhouseWood : Msp_Greenhouse_Base
 	
     override string Get_KitName()
 	{
-		return "Msp_GreenhouseWood_Kit";
+		return "Msp_Greenhouse_Vanilla_Kit";
 	}
 };

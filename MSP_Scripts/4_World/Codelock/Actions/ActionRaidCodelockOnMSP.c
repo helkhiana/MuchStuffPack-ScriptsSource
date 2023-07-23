@@ -11,8 +11,8 @@ class ActionRaidCodelockOnMSPCB : ActionContinuousBaseCB
 
 class ActionRaidCodelockOnMSP : ActionContinuousBase
 {
-    protected float _Health;
-    protected float _maxHealth;
+    protected float m_LockHealth;
+    protected float m_MaxHealth;
 
     void ActionRaidCodelockOnMSP()
     {
@@ -30,7 +30,7 @@ class ActionRaidCodelockOnMSP : ActionContinuousBase
     }
 
     override string GetText() {
-        int healthPercentage = (_Health / _maxHealth) * 100;
+        int healthPercentage = (m_LockHealth / m_MaxHealth) * 100;
         return "Destroy Codelock | HP: " + healthPercentage + "%";
     }
 
@@ -38,8 +38,8 @@ class ActionRaidCodelockOnMSP : ActionContinuousBase
     {
 		ItemBase itemBase = ItemBase.Cast(target.GetObject());
         CodeLock codelock;
-        _Health = 0;
-        _maxHealth = 0;
+        m_LockHealth = 0;
+        m_MaxHealth = 0;
 
         if (itemBase && (itemBase.IsKindOf("Msp_Openable_Placeable_Base")|| itemBase.IsKindOf("Msp_Openable_Base") || itemBase.IsKindOf("Msp_Greenhouse_Base")))
         {
@@ -55,8 +55,8 @@ class ActionRaidCodelockOnMSP : ActionContinuousBase
 
             if (codelock && GetDayZGame().Get_MSP_Codelock_Config().CanRaid()) 
             {
-                _Health = codelock.GetSynchronizedHealth();
-                _maxHealth = codelock.GetMaxHealth("", "Health");
+                m_LockHealth = codelock.GetSynchronizedHealth();
+                m_MaxHealth = codelock.GetMaxHealth("", "Health");
                 return true;
             }
         }       
@@ -70,7 +70,7 @@ class ActionRaidCodelockOnMSP : ActionContinuousBase
             return;
 
         ItemBase itemBase = ItemBase.Cast(action_data.m_Target.GetObject());
-        float raidIncrementAmount = _maxHealth / GetDayZGame().GetCodeLockConfig().GetIncrementAmount();
+        float raidIncrementAmount = m_MaxHealth / GetDayZGame().GetCodeLockConfig().GetIncrementAmount();
         int toolDamage = GetDayZGame().Get_MSP_Codelock_Config().Get_ToolDamageOnRaid();
 
         if (itemBase)
@@ -81,13 +81,13 @@ class ActionRaidCodelockOnMSP : ActionContinuousBase
             {
                 codelock.AddHealth("", "Health", -raidIncrementAmount);
 
-                float _Health = codelock.GetHealth();
+                float m_LockHealth = codelock.GetHealth();
 
-                codelock.SetSynchronizedHealth(_Health);
+                codelock.SetSynchronizedHealth(m_LockHealth);
 
-                if (_Health > 0) 
+                if (m_LockHealth > 0) 
                 {
-                    GetCodeLockLogger().WriteLog("RAID", action_data.m_Player.GetIdentity(), codelock.GetPosition(), "", false, false, raidIncrementAmount, _Health);
+                    GetCodeLockLogger().WriteLog("RAID", action_data.m_Player.GetIdentity(), codelock.GetPosition(), "", false, false, raidIncrementAmount, m_LockHealth);
                 } 
                 else 
                 {

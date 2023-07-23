@@ -6,12 +6,8 @@ modded class ActionConstructor
         actions.Insert(ActionDismantleItem);
         actions.Insert(ActionCustomClose);
         actions.Insert(ActionCustomOpen);
-        actions.Insert(ActionEmptyPlanter);
-        actions.Insert(ActionFillPlanter);
         actions.Insert(ActionFoldItem);
-        actions.Insert(ActionOpenCloseFridge);
-        //actions.Insert(ActionUseMSPObject);
-        actions.Insert(ActionCustomCloseOpen);
+        actions.Insert(ActionPackWithHands);
         
         #ifdef CodeLock
         actions.Insert(ActionRaidCodelockOnMSP);

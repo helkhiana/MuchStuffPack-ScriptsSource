@@ -9,6 +9,7 @@ class Msp_WaterBarrel_Stand : Msp_Storage_Base
         if (Msp_WaterBarrel.Cast(item))
         {
             m_DisplayName = "Water Barrel";
+            SetSimpleHiddenSelectionState(0, true);
         }
     }
 
@@ -19,6 +20,7 @@ class Msp_WaterBarrel_Stand : Msp_Storage_Base
         if (Msp_WaterBarrel.Cast(item))
         {            
             m_DisplayName = "Water Barrel Stand";
+            SetSimpleHiddenSelectionState(0, false);
         }
     }
 
@@ -36,19 +38,17 @@ class Msp_WaterBarrel_Stand : Msp_Storage_Base
     {
         super.SetActions();
         AddAction(ActionDrinkFromWaterBarrel);
+		AddAction(ActionDrainLiquid);
+		AddAction(ActionPourLiquid);
     }
 };
 
 class Msp_WaterBarrel : Bottle_Base 
 {   
-    override bool IsOpen(){return true;}
-    
-    override bool CanDetachAttachment(EntityAI parent) {
-        if (parent.FindAttachmentBySlotName("Valve"))
-            return false;
-
-        return super.CanDetachAttachment(parent);
-    }      
+    override bool IsOpen()
+    {
+        return true;
+    }   
 
     override void SetActions()
     {

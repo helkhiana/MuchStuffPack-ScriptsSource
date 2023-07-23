@@ -28,7 +28,7 @@ class CfgWeapons
 	class RifleCore;
 	class Rifle_Base: RifleCore
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -67,7 +67,7 @@ class CfgWeapons
 	class PistolCore;
 	class Pistol_Base: PistolCore
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Pistol",
 			"Pistol1",
@@ -80,6 +80,13 @@ class CfgWeapons
 
 class CfgSlots
 {
+	class Slot_Att_CodeLock
+	{
+		name="Att_CodeLock";
+		displayName="Code Lock";
+		selection="att_codeLock";
+		ghostIcon="set:dayz_inventory image:combolock";
+	};
 	class Slot_Flashlight
 	{
 		name="Flashlight";
@@ -161,13 +168,13 @@ class CfgSlots
 	{
 		name="WaterBarrel1";
 		displayName="Water barrel";
-		ghostIcon="missing";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Valve
 	{
 		name="Valve";
 		displayName="Valve";
-		ghostIcon="missing";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Axe1
 	{
@@ -215,19 +222,19 @@ class CfgSlots
 	{
 		name="Pliers1";
 		displayName="Pliers";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Screwdriver1
 	{
 		name="Screwdriver1";
 		displayName="Screwdriver";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Screwdriver2
 	{
 		name="Screwdriver2";
 		displayName="Screwdriver";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Shovel1
 	{
@@ -239,200 +246,200 @@ class CfgSlots
 	{
 		name="Hammer1";
 		displayName="Hammer";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Hammer2
 	{
 		name="Hammer2";
 		displayName="Hammer";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Hammer3
 	{
 		name="Hammer3";
 		displayName="Hammer";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Saw1
 	{
 		name="Saw1";
 		displayName="Saw";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Saw2
 	{
 		name="Saw2";
 		displayName="Saw";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Saw3
 	{
 		name="Saw3";
 		displayName="Saw";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_Wire1
 	{
 		name="Wire1";
 		displayName="Wire";
-		ghostIcon="metalwire";
+		ghostIcon="set:dayz_inventory image:metalwire";
 	};
 	class Slot_Wire2
 	{
 		name="Wire2";
 		displayName="Wire";
-		ghostIcon="metalwire";
+		ghostIcon="set:dayz_inventory image:metalwire";
 	};
 	class Slot_Wire3
 	{
 		name="Wire3";
 		displayName="Wire";
-		ghostIcon="metalwire";
+		ghostIcon="set:dayz_inventory image:metalwire";
 	};
 
 	class Slot_Pistol1
 	{
 		name="Pistol1";
 		displayName="Pistol";
-		ghostIcon="pistol";
+		ghostIcon="set:dayz_inventory image:pistol";
 	};
 	class Slot_Pistol2
 	{
 		name="Pistol2";
 		displayName="Pistol";
-		ghostIcon="pistol";
+		ghostIcon="set:dayz_inventory image:pistol";
 	};
 	class Slot_Pistol3
 	{
 		name="Pistol3";
 		displayName="Pistol";
-		ghostIcon="pistol";
+		ghostIcon="set:dayz_inventory image:pistol";
 	};
 	class Slot_Pistol4
 	{
 		name="Pistol4";
 		displayName="Pistol";
-		ghostIcon="pistol";
+		ghostIcon="set:dayz_inventory image:pistol";
 	};
 	class Slot_FirstAid
 	{
 		name = "FirstAid";
 		displayName = "First Aid Kit";
-		ghostIcon = "medicalbandage";
+		ghostIcon="set:dayz_inventory image:medicalbandage";
 	};
 	class Slot_FirstAidKit1
 	{
 		name = "FirstAidKit1";
 		displayName = "First Aid Kit";
-		ghostIcon = "medicalbandage";
+		ghostIcon="set:dayz_inventory image:medicalbandage";
 	};
 	class Slot_FirstAidKit2
 	{
 		name = "FirstAidKit2";
 		displayName = "First Aid Kit";
-		ghostIcon = "medicalbandage";
+		ghostIcon="set:dayz_inventory image:medicalbandage";
 	};
 	class Slot_FirstAidKit3
 	{
 		name = "FirstAidKit3";
 		displayName = "First Aid Kit";
-		ghostIcon = "medicalbandage";
+		ghostIcon="set:dayz_inventory image:medicalbandage";
 	};
 	class Slot_FirstAidKit4
 	{
 		name = "FirstAidKit4";
 		displayName = "First Aid Kit";
-		ghostIcon = "medicalbandage";
+		ghostIcon="set:dayz_inventory image:medicalbandage";
 	};
 	class Slot_protectorcase
 	{
 		name = "protectorcase";
 		displayName = "Protector Case";
-		ghostIcon = "pouches";
+		ghostIcon = "set:dayz_inventory image:pouches";
 	};
 	class Slot_AmmoBox1
 	{
 		name="AmmoBox1";
 		displayName="Ammo Box";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_AmmoBox2
 	{
 		name="AmmoBox2";
 		displayName="Ammo Box";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_AmmoBox3
 	{
 		name="AmmoBox3";
 		displayName="Ammo Box";
-		ghostIcon="";
+		ghostIcon="set:dayz_inventory image:cat_common_cargo";
 	};
 	class Slot_GasLamp
 	{
 		name="GasLamp";
 		displayName="Gas Lamp";
-		ghostIcon="cookingequipment";
+		ghostIcon="set:dayz_inventory image:cookingequipment";
 	};
 	class Slot_FGrenade1
 	{
 		name="FGrenade1";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade2
 	{
 		name="FGrenade2";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade3
 	{
 		name="FGrenade3";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade4
 	{
 		name="FGrenade4";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade5
 	{
 		name="FGrenade5";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade6
 	{
 		name="FGrenade6";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade7
 	{
 		name="FGrenade7";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade8
 	{
 		name="FGrenade8";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade9
 	{
 		name="FGrenade9";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_FGrenade10
 	{
 		name="FGrenade10";
 		displayName="Grenade";
-		ghostIcon="grenade";
+		ghostIcon="set:dayz_inventory image:grenade";
 	};
 	class Slot_Shoulder1
 	{
@@ -575,301 +582,301 @@ class CfgSlots
 	class Slot_Book1
 	{
 		name="Book1";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book2
 	{
 		name="Book2";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book3
 	{
 		name="Book3";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book4
 	{
 		name="Book4";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book5
 	{
 		name="Book5";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book6
 	{
 		name="Book6";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book7
 	{
 		name="Book7";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book8
 	{
 		name="Book8";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book9
 	{
 		name="Book9";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book10
 	{
 		name="Book10";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book11
 	{
 		name="Book11";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book12
 	{
 		name="Book12";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book13
 	{
 		name="Book13";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book14
 	{
 		name="Book14";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book15
 	{
 		name="Book15";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book16
 	{
 		name="Book16";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book17
 	{
 		name="Book17";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book18
 	{
 		name="Book18";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book19
 	{
 		name="Book19";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book20
 	{
 		name="Book20";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book21
 	{
 		name="Book21";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book22
 	{
 		name="Book22";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book23
 	{
 		name="Book23";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book24
 	{
 		name="Book24";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book25
 	{
 		name="Book25";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book26
 	{
 		name="Book26";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book27
 	{
 		name="Book27";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book28
 	{
 		name="Book28";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book29
 	{
 		name="Book29";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book30
 	{
 		name="Book30";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book31
 	{
 		name="Book31";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book32
 	{
 		name="Book32";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book33
 	{
 		name="Book33";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book34
 	{
 		name="Book34";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book35
 	{
 		name="Book35";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book36
 	{
 		name="Book36";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book37
 	{
 		name="Book37";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book38
 	{
 		name="Book38";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book39
 	{
 		name="Book39";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book40
 	{
 		name="Book40";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book41
 	{
 		name="Book41";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book42
 	{
 		name="Book42";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book43
 	{
 		name="Book43";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book44
 	{
 		name="Book44";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book45
 	{
 		name="Book45";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book46
 	{
 		name="Book46";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book47
 	{
 		name="Book47";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book48
 	{
 		name="Book48";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book49
 	{
 		name="Book49";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 	class Slot_Book50
 	{
 		name="Book50";
-		displayName="Book";
+		displayname="Book";
 		ghostIcon="set:dayz_inventory image:book";
 	};
 };
@@ -881,7 +888,7 @@ class CfgVehicles
 
 	class PortableGasLamp: Inventory_Base
 	{
-        inventorySlot[]=
+        inventorySlot[] +=
 		{
 			"GasLamp"
 		};
@@ -889,7 +896,7 @@ class CfgVehicles
 
 	class Grenade_Base: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"VestGrenadeA",
 			"VestGrenadeB",
@@ -910,7 +917,7 @@ class CfgVehicles
 	};
 	class Sword: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -921,7 +928,7 @@ class CfgVehicles
 	};
 	class WoodAxe: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -930,7 +937,7 @@ class CfgVehicles
 	};
 	class FirefighterAxe: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -939,7 +946,7 @@ class CfgVehicles
 	};
 	class Pickaxe: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -948,7 +955,7 @@ class CfgVehicles
 	};
 	class Hatchet: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"MassTool",
 			"Hatchet",
@@ -960,7 +967,7 @@ class CfgVehicles
 	};
 	class Hammer: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Hammer",
 			"MassHammer",
@@ -971,7 +978,7 @@ class CfgVehicles
 	};
 	class Shovel: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -980,7 +987,7 @@ class CfgVehicles
 	};
 	class Pliers: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Pliers",
 			"Pliers1"
@@ -988,7 +995,7 @@ class CfgVehicles
 	};
 	class HandSaw: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"HandSaw",
 			"Saw",
@@ -999,7 +1006,7 @@ class CfgVehicles
 	};
 	class Hacksaw: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Hacksaw",
 			"Saw",
@@ -1010,7 +1017,7 @@ class CfgVehicles
 	};
 	class Screwdriver: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Screwdriver",
 			"MassScrewDriver",
@@ -1020,7 +1027,7 @@ class CfgVehicles
 	};
 	class MetalWire: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"MetalWire",
 			"Material_MetalWire",
@@ -1032,7 +1039,7 @@ class CfgVehicles
 	};
 	class Book_Base: Inventory_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Book",
 			"Book1","Book2","Book3","Book4","Book5",
@@ -1057,7 +1064,7 @@ class CfgVehicles
 	class FishingRod_Base;
 	class FishingRod_Base_New: FishingRod_Base
 	{
-		inventorySlot[]=
+		inventorySlot[] +=
 		{
 			"Shoulder",
 			"Melee",
@@ -1076,20 +1083,20 @@ class CfgVehicles
 	};
 	class FirstAidKit: Container_Base
 	{
-		inventorySlot[] = {"FirstAid","FirstAidKit1","FirstAidKit2","FirstAidKit3","FirstAidKit4"};
+		inventorySlot[] += {"FirstAid","FirstAidKit1","FirstAidKit2","FirstAidKit3","FirstAidKit4"};
 	};
 	class SmallProtectorCase: Container_Base
 	{
-		inventorySlot[] = {"protectorcase"};
+		inventorySlot[] += {"protectorcase"};
 	};
 	class AmmoBox: Container_Base
 	{
-		inventorySlot[] = {"300RoundBox","AmmoBox1","AmmoBox2","AmmoBox3"};
+		inventorySlot[] += {"300RoundBox","AmmoBox1","AmmoBox2","AmmoBox3"};
 	};
 
 	class Flashlight: Inventory_Base
 	{
-		inventorySlot[] = {"Flashlight","Flashlight1","Flashlight2","Flashlight3"};
+		inventorySlot[] += {"Flashlight","Flashlight1","Flashlight2","Flashlight3"};
 	};
 };
 
@@ -1554,304 +1561,304 @@ class CfgNonAIVehicles
 		model="\MuchStuffPack\MSP_Storage_proxies\Sword3.p3d";
 	};
 	
-	class Proxybook1: ProxyAttachment
+	class Proxymspbook1: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book1" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book1.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook1.p3d";
 	};
-	class Proxybook2: ProxyAttachment
+	class Proxymspbook2: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book2" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book2.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook2.p3d";
 	};
-	class Proxybook3: ProxyAttachment
+	class Proxymspbook3: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book3" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book3.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook3.p3d";
 	};
-	class Proxybook4: ProxyAttachment
+	class Proxymspbook4: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book4" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book4.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook4.p3d";
 	};
-	class Proxybook5: ProxyAttachment
+	class Proxymspbook5: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book5" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book5.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook5.p3d";
 	};
-	class Proxybook6: ProxyAttachment
+	class Proxymspbook6: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book6" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book6.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook6.p3d";
 	};
-	class Proxybook7: ProxyAttachment
+	class Proxymspbook7: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book7" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book7.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook7.p3d";
 	};
-	class Proxybook8: ProxyAttachment
+	class Proxymspbook8: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book8" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book8.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook8.p3d";
 	};
-	class Proxybook9: ProxyAttachment
+	class Proxymspbook9: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book9" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book9.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook9.p3d";
 	};
-	class Proxybook10: ProxyAttachment
+	class Proxymspbook10: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book10" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book10.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook10.p3d";
 	};
-	class Proxybook11: ProxyAttachment
+	class Proxymspbook11: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book11" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book11.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook11.p3d";
 	};
-	class Proxybook12: ProxyAttachment
+	class Proxymspbook12: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book12" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book12.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook12.p3d";
 	};
-	class Proxybook13: ProxyAttachment
+	class Proxymspbook13: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book13" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book13.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook13.p3d";
 	};
-	class Proxybook14: ProxyAttachment
+	class Proxymspbook14: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book14" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book14.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook14.p3d";
 	};
-	class Proxybook15: ProxyAttachment
+	class Proxymspbook15: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book15" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book15.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook15.p3d";
 	};
-	class Proxybook16: ProxyAttachment
+	class Proxymspbook16: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book16" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book16.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook16.p3d";
 	};
-	class Proxybook17: ProxyAttachment
+	class Proxymspbook17: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book17" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book17.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook17.p3d";
 	};
-	class Proxybook18: ProxyAttachment
+	class Proxymspbook18: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book18" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book18.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook18.p3d";
 	};
-	class Proxybook19: ProxyAttachment
+	class Proxymspbook19: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book19" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book19.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook19.p3d";
 	};
-	class Proxybook20: ProxyAttachment
+	class Proxymspbook20: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book20" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book20.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook20.p3d";
 	};
-	class Proxybook21: ProxyAttachment
+	class Proxymspbook21: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book21" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book21.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook21.p3d";
 	};
-	class Proxybook22: ProxyAttachment
+	class Proxymspbook22: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book22" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book22.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook22.p3d";
 	};
-	class Proxybook23: ProxyAttachment
+	class Proxymspbook23: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book23" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book23.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook23.p3d";
 	};
-	class Proxybook24: ProxyAttachment
+	class Proxymspbook24: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book24" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book24.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook24.p3d";
 	};
-	class Proxybook25: ProxyAttachment
+	class Proxymspbook25: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book25" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book25.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook25.p3d";
 	};
-	class Proxybook26: ProxyAttachment
+	class Proxymspbook26: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book26" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book26.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook26.p3d";
 	};
-	class Proxybook27: ProxyAttachment
+	class Proxymspbook27: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book27" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book27.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook27.p3d";
 	};
-	class Proxybook28: ProxyAttachment
+	class Proxymspbook28: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book28" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book28.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook28.p3d";
 	};
-	class Proxybook29: ProxyAttachment
+	class Proxymspbook29: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book29" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book29.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook29.p3d";
 	};
-	class Proxybook30: ProxyAttachment
+	class Proxymspbook30: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book30" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book30.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook30.p3d";
 	};
-	class Proxybook31: ProxyAttachment
+	class Proxymspbook31: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book31" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book31.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook31.p3d";
 	};
-	class Proxybook32: ProxyAttachment
+	class Proxymspbook32: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book32" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book32.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook32.p3d";
 	};
-	class Proxybook33: ProxyAttachment
+	class Proxymspbook33: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book33" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book33.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook33.p3d";
 	};
-	class Proxybook34: ProxyAttachment
+	class Proxymspbook34: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book34" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book34.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook34.p3d";
 	};
-	class Proxybook35: ProxyAttachment
+	class Proxymspbook35: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book35" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book35.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook35.p3d";
 	};
-	class Proxybook36: ProxyAttachment
+	class Proxymspbook36: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book36" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book36.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook36.p3d";
 	};
-	class Proxybook37: ProxyAttachment
+	class Proxymspbook37: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book37" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book37.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook37.p3d";
 	};
-	class Proxybook38: ProxyAttachment
+	class Proxymspbook38: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book38" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book38.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook38.p3d";
 	};
-	class Proxybook39: ProxyAttachment
+	class Proxymspbook39: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book39" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book39.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook39.p3d";
 	};
-	class Proxybook40: ProxyAttachment
+	class Proxymspbook40: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book40" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book40.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook40.p3d";
 	};
-	class Proxybook41: ProxyAttachment
+	class Proxymspbook41: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book41" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book41.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook41.p3d";
 	};
-	class Proxybook42: ProxyAttachment
+	class Proxymspbook42: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book42" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book42.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook42.p3d";
 	};
-	class Proxybook43: ProxyAttachment
+	class Proxymspbook43: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book43" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book43.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook43.p3d";
 	};
-	class Proxybook44: ProxyAttachment
+	class Proxymspbook44: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book44" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book44.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook44.p3d";
 	};
-	class Proxybook45: ProxyAttachment
+	class Proxymspbook45: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book45" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book45.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook45.p3d";
 	};
-	class Proxybook46: ProxyAttachment
+	class Proxymspbook46: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book46" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book46.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook46.p3d";
 	};
-	class Proxybook47: ProxyAttachment
+	class Proxymspbook47: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book47" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book47.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook47.p3d";
 	};
-	class Proxybook48: ProxyAttachment
+	class Proxymspbook48: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book48" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book48.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook48.p3d";
 	};
-	class Proxybook49: ProxyAttachment
+	class Proxymspbook49: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book49" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book49.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook49.p3d";
 	};
-	class Proxybook50: ProxyAttachment
+	class Proxymspbook50: ProxyAttachment
 	{
 		scope=2;
 		inventorySlot[] = { "Book50" };
-		model="\MuchStuffPack\MSP_Storage_proxies\books\book50.p3d";
+		model="\MuchStuffPack\MSP_Storage_proxies\books\mspbook50.p3d";
 	};
 };

@@ -27,28 +27,28 @@ class ActionCustomOpen: ActionInteractBase
 		string selection = target.GetObject().GetActionComponentName(target.GetComponentIndex());
 		if(selection && selection == "lever")
 			return false;	
-		ItemBase building = ItemBase.Cast(target.GetObject());
-		if(building)
+		Msp_ItemBase mspitembase = Msp_ItemBase.Cast(target.GetObject());
+		if(mspitembase)
 		{
-			if(building.IsKindOf("Msp_MedievalGibbet") && !building.IsFacingPlayer(player))
+			if(mspitembase.IsKindOf("Msp_MedievalGibbet") && !mspitembase.IsMspFacingPlayer(player))
 				return false;
 			
 			#ifdef CodeLock
-				if(building.IsCodeLocked())
+				if(mspitembase.IsCodeLocked())
 					return false;
 			#endif
 			
-			return !building.IsOpen();
+			return !mspitembase.IsOpen();
 		}
 		return false;
 	}
 	
 	override void OnStartServer( ActionData action_data )
 	{
-		ItemBase building = ItemBase.Cast(action_data.m_Target.GetObject());
-		if(building)
+		Msp_ItemBase mspitembase = Msp_ItemBase.Cast(action_data.m_Target.GetObject());
+		if(mspitembase)
 		{	
-			building.Open();
+			mspitembase.Open();
 			return;
 		}
 	}

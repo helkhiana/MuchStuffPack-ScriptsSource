@@ -1,23 +1,11 @@
 class Msp_Foldable_Item : Msp_Item
 {
-    ref protected EffectSound m_DeployLoopSound;
     bool m_FoldedState = true;
     bool m_FoldedStateLocal = true;
 
     void Msp_Foldable_Item()
     {
-        m_DeployLoopSound = new EffectSound;
         RegisterNetSyncVariableBool("m_FoldedState");
-        RegisterNetSyncVariableBool("m_IsSoundSynchRemote");
-        RegisterNetSyncVariableBool("m_IsDeploySound");
-    }
-
-    void ~Msp_Foldable_Item()
-    {
-        if (m_DeployLoopSound)
-        {
-            SEffectManager.DestroySound(m_DeployLoopSound);
-        }
     }
 
     override bool HasProxyParts()
@@ -128,11 +116,6 @@ class Msp_Foldable_Item : Msp_Item
         }
         return 0;
     }
-
-    //================================================================
-    // ADVANCED PLACEMENT
-    //================================================================
-
     
 	override void OnPlacementComplete(Man player, vector position = "0 0 0", vector orientation = "0 0 0")
 	{
@@ -140,7 +123,6 @@ class Msp_Foldable_Item : Msp_Item
         if (GetGame().IsServer())
         {
             Unfold();
-            SetIsDeploySound(true);
         }
     }
 
@@ -150,6 +132,5 @@ class Msp_Foldable_Item : Msp_Item
         AddAction(ActionFoldItem);
         AddAction(ActionTogglePlaceObject);
         AddAction(ActionPlaceObject);
-		AddAction(ActionUseMSPObject);
     }
 };
